@@ -10,6 +10,13 @@ namespace demo_01
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Nhap ho va ten:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Ho va ten la: " + name);
+            Console.ReadKey();
+
+            
+            
         }
     }
 }
