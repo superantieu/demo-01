@@ -13,6 +13,7 @@ namespace demo_01
             Console.WriteLine("Nhap ho va ten:");
             string name = Console.ReadLine();
             Console.WriteLine("Ho va ten la: " + name);
+            Console.WriteLine("Cam on");
             Console.ReadKey();
 
             
