@@ -48,36 +48,48 @@ namespace demo_01
             //{ x = "so chan"; }
             // Console.WriteLine("so ban vua nhap la {0}", x);
             //Console.ReadKey();
-            Console.WriteLine("nhap vao thang ban muon kiem tra: ");
-            int soThang = int.Parse(Console.ReadLine());
-            switch (soThang)
+
+
+            //Console.WriteLine("nhap vao thang ban muon kiem tra: ");
+            //int soThang = int.Parse(Console.ReadLine());
+            //switch (soThang)
+            //{
+            //    case 1:
+            //    case 3:
+            //    case 5:
+            //    case 7:
+            //    case 8:
+            //    case 10:
+            //    case 12:
+
+            //        Console.WriteLine("Thang {0} co 31 ngay", soThang);
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Thang {0} co 28 ngay", soThang);
+            //        break;
+            //    case 4:
+            //    case 6:
+            //    case 9:
+            //    case 11:
+            //        Console.WriteLine("Thang {0} co 30 ngay", soThang);
+            //        break;
+            //    default:
+            //        Console.WriteLine("Thang ban nhap khong hop le");
+            //        break;
+
+
+
+            //}
+            //Console.ReadKey();
+
+            Console.WriteLine("Nhap vao so nguyen n: ");
+            int n = int.Parse(Console.ReadLine());
+            double S = 0;
+            for (int i = 1; i <= n; i++)
             {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-
-                    Console.WriteLine("Thang {0} co 31 ngay", soThang);
-                    break;
-                case 2:
-                    Console.WriteLine("Thang {0} co 28 ngay", soThang);
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    Console.WriteLine("Thang {0} co 30 ngay", soThang);
-                    break;
-                default:
-                    Console.WriteLine("Thang ban nhap khong hop le");
-                    break;
-                    
-
-
+                S += Math.Pow(i, i);
             }
+            Console.WriteLine("Tong binh phuong tu 1 den {0} la {1}: ",n,S);
             Console.ReadKey();
         }
     }
