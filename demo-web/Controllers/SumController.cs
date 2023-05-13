@@ -8,5 +8,14 @@ namespace demo_web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(int songuyen1, int songuyen2)
+        {
+            ViewData["SoNguyenA"] = songuyen1;
+                ViewData["SoNguyenB"] = songuyen2;
+            ViewData["KetQua"] = songuyen1 + songuyen2;
+            return View();
+        }
     }
 }
