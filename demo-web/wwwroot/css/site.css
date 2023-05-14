@@ -20,3 +20,43 @@ html {
 body {
   margin-bottom: 60px;
 }
+.text-center {
+    color: #4c469c;
+}
+.content-tinhlai {
+    display: flex;
+    column-gap: 100px;
+}
+.content-right {
+  
+  min-width: 50%;
+    background: #FFFFFF;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.25), 5px 5px 24px rgba(72, 63, 168, 0.4);
+    border-radius: 16px;
+    padding: 28px 40px;
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 70%; 
+}
+.content-left {
+    width: 30%;
+}
+.form-control {
+    color: #483FA8;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #704ddc;
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    vertical-align: middle;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 50px;
+    color: #fff;
+}
