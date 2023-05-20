@@ -7,11 +7,13 @@ namespace demo_web.Controllers
     {
         public IActionResult Index()
         {
+            //Gọi class rỗng
             LaiSuat ls = new LaiSuat();
+            //Nhớ return về View
             return View(ls);
         }
-
-
+        //Gọi class, nhớ HttpPost
+        //Biến bên Controler phải lấy đúng name bên Index 
 
         [HttpPost]
         public IActionResult Index(int tiengui, int laisuatgui, int kyhan)

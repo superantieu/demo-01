@@ -1,4 +1,6 @@
-﻿@model demo_web.Models.LaiSuat
+﻿@*Nhớ khởi tạo model theo tên gọi dẫn đến class như bên dưới*@
+
+@model demo_web.Models.LaiSuat
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,16 +14,17 @@
             <div class="content-left col-4 mx-auto">
                 <div class="mb-3">
                     <label for="soNguyen1" class="form-label">Số tiền gửi *</label>
-                    <input type="number" class="form-control" id="soNguyen1" name="soNguyen1" value="@Model.TienGui" aria-describedby="text">
+                    @*Tại vị trí value dùng @Model.thuộc tính bên class để lấy giá trị*@
+                    <input type="number" class="form-control" id="soNguyen1" name="tiengui" value="@Model.TienGui" aria-describedby="text">
                     
                 </div>
                 <div class="mb-3">
                     <label for="soNguyen2" class="form-label">Lãi suất gửi *</label>
-                    <input type="number" class="form-control" id="soNguyen2" name="soNguyen2" value="@Model.LaiSuatGui" aria-describedby="text">
+                    <input type="number" class="form-control" id="soNguyen2" name="laisuatgui" value="@Model.LaiSuatGui" aria-describedby="text">
                 </div>
                 <div class="mb-3">
                     <label for="soNguyen3" class="form-label">Kỳ hạn gửi *</label>
-                    <input type="number" class="form-control" id="soNguyen3" name="soNguyen3" value="@Model.KyHan" aria-describedby="text">
+                    <input type="number" class="form-control" id="soNguyen3" name="kyhan" value="@Model.KyHan" aria-describedby="text">
                 </div>
                  
             
@@ -29,11 +32,11 @@
             <div class ="content-right">
                 <div class="mb-5 col-4 mx-auto">
                     <label for="ketQua1" class="form-label fw-bold">Số tiền lãi nhận được</label>
-                    <input type="text" class="form-control" id="ketQua1" name="ketQua1" value="@Model.TienLai" aria-describedby="text">
+                    <input type="text" class="form-control" id="ketQua1" name="a" value="@Model.TienLai" aria-describedby="text">
                 </div>
                 <div class="mb-5 col-4 mx-auto">
                     <label for="ketQua2" class="form-label fw-bold">Tổng số tiền nhận được khi đến hạn</label>
-                    <input type="text" class="form-control" id="ketQua2" name="ketQua2" value="@Model.TongTien" aria-describedby="text">
+                    <input type="text" class="form-control" id="ketQua2" name="b" value="@Model.TongTien" aria-describedby="text">
                 </div>
             </div>
         </div>
