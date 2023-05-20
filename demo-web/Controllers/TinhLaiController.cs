@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using demo_web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace demo_web.Controllers
 {
@@ -9,15 +10,21 @@ namespace demo_web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(int songuyen1, int songuyen2, int songuyen3)
+        public IActionResult Index(int tiengui, int laisuatgui, int kyhan)
         {
-            ViewData["SoNguyenA"] = songuyen1;
-            ViewData["SoNguyenB"] = songuyen2;
-            ViewData["SoNguyenC"] = songuyen3;
-            double ketqua = (songuyen1 * songuyen2 / 100 * songuyen3 / 12);
-            ViewData["KetQua1"] = ketqua.ToString("N0");
-            ViewData["KetQua2"] = (songuyen1 + ketqua).ToString("N0");
-            return View();
+            LaiSuat ls = new LaiSuat(tiengui, laisuatgui, kyhan);
+            return View(ls);
         }
+        //{
+        //    ViewData["SoNguyenA"] = songuyen1;
+        //    ViewData["SoNguyenB"] = songuyen2;
+        //    ViewData["SoNguyenC"] = songuyen3;
+        //    double ketqua = (songuyen1 * songuyen2 / 100 * songuyen3 / 12);
+        //    ViewData["KetQua1"] = ketqua.ToString("N0");
+        //    ViewData["KetQua2"] = (songuyen1 + ketqua).ToString("N0");
+        //    return View();
+        //}
+
+
     }
 }
