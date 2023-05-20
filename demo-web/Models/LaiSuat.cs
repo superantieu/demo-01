@@ -23,8 +23,8 @@
 
         private static double TinhTienLai(int tiengui,int laisuatgui, int kyhan)
         {
-            double TienLai = tiengui * laisuatgui * kyhan / 10 / 12;
-            return TienLai;
+            return tiengui * (laisuatgui / 100) * (kyhan / 12);
+            
           
         }
 

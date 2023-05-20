@@ -7,12 +7,16 @@ namespace demo_web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            LaiSuat ls = new LaiSuat();
+            return View(ls);
         }
+
+
+
         [HttpPost]
         public IActionResult Index(int tiengui, int laisuatgui, int kyhan)
         {
-            LaiSuat ls = new LaiSuat(tiengui, laisuatgui, kyhan);
+            LaiSuat ls = new LaiSuat(tiengui, laisuatgui, kyhan); 
             return View(ls);
         }
         //{
@@ -25,6 +29,5 @@ namespace demo_web.Controllers
         //    return View();
         //}
 
-
-    }
-}
+    
+}}
