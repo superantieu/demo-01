@@ -31,7 +31,7 @@ body {
   
   min-width: 50%;
     background: #FFFFFF;
-    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.25), 5px 5px 24px rgba(72, 63, 168, 0.4);
+    box-shadow: -10px -50px 20px rgba(255, 255, 255, 0.25), 5px 5px 24px rgba(72, 63, 168, 0.4);
     border-radius: 16px;
     padding: 28px 40px;
 }
@@ -40,7 +40,11 @@ body {
     width: 70%; 
 }
 .content-left {
-    width: 30%;
+    width: 35%;
+    background: #FFFFFF;
+    box-shadow: 20px -10px -10px rgba(255, 255, 255, 0.25), 24px 5px 10px rgba(72, 63, 168, 0.4);
+    border-radius: 16px;
+    padding: 28px 40px;
 }
 .form-control {
     color: #483FA8;

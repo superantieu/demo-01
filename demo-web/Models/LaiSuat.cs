@@ -31,7 +31,7 @@ namespace demo_web.Models
         //Biến trong hàm đặt tùy sở thích, cần minh bạch dễ hiểu
         private static double TinhTienLai(int a, int b, int c)
         {
-            return (a * b / 100) * (c / 12);
+            return (a * b / 100) * c / 12;
           
 
 

@@ -1,0 +1,60 @@
+﻿@*Nhớ khởi tạo model theo tên gọi dẫn đến class như bên dưới*@
+
+@model demo_web.Models.LaiKep
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<<div class="d-flex flex-column">
+    <h1 class="text-center my-5 text-uppercase">CÔNG CỤ TÍNH LÃI TIỀN GỬI TIẾT KIỆM</h1>
+    <div class="d-flex flex-column justify-content-between gap-3">
+        <form action="/LaiKep/Index" method="post">
+            <div class="content-tinhlai">
+                <div class="content-left col-4 mx-auto">
+                    <div class="mb-3">
+                        <label for="soNguyen1" class="form-label">Số tiền gửi *</label>
+                        @*Tại vị trí value dùng @Model.thuộc tính bên class để lấy giá trị*@
+                        <input type="number" class="form-control" id="soNguyen1" name="tiengui" value="@Model.TienGui" aria-describedby="text">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="soNguyen2" class="form-label">Lãi suất gửi *</label>
+                        <input type="number" class="form-control" id="soNguyen2" name="laisuatgui" value="@Model.LaiSuatGui" aria-describedby="text">
+                    </div>
+                    <div class="mb-3">
+                        <label for="soNguyen3" class="form-label">Kỳ hạn gửi *</label>
+                        <input type="number" class="form-control" id="soNguyen3" name="kyhan" value="@Model.KyHan" aria-describedby="text">
+                    </div>
+                
+                    <div class="input-group mb-3">
+  
+                          <select class="form-select" id="soLanDong" name="soLanDong" aria-label="Example select with button addon">
+                                                    <option selected>Chọn số lần đóng 1 năm</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                          </select>
+                    </div>
+
+                </div>
+                <div class="content-right">
+                    <div class="mb-5 col-4 mx-auto">
+                        <label for="ketQua1" class="form-label fw-bold">Số tiền lãi nhận được</label>
+                        <input type="text" class="form-control" id="ketQua1" name="a" value="@Model.TienLai" aria-describedby="text">
+                    </div>
+                    <div class="mb-5 col-4 mx-auto">
+                        <label for="ketQua2" class="form-label fw-bold">Tổng số tiền nhận được khi đến hạn</label>
+                        <input type="text" class="form-control" id="ketQua2" name="b" value="@Model.TongTien" aria-describedby="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-5">
+                <button type="submit" id="ketqua" class="btn btn-primary px-4 py-2">Xem kết quả</button>
+            </div>
+        </form>
+    </div>
+</div>
+
