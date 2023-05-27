@@ -63,4 +63,30 @@ body {
     margin-top: 30px;
     border-radius: 50px;
     color: #fff;
+    transition: 0.5s;
+}
+#thanhtoan {
+    background-color: olivedrab;
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    vertical-align: middle;
+    width: 150px;
+    display: block;
+    margin-top: 30px;
+    border-radius: 50px;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn-primary:hover,
+#thanhtoan:hover {
+    background-color: #258cfb;
+    transform: translateY(-5px);
+}
+.text-center a i {
+    transition: 0.2s;
+}
+.text-center a i:hover {
+    transform: scale(1.2);
 }
