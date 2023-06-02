@@ -1,4 +1,4 @@
-﻿
+﻿// Link tới model
 using demo_web.Models;
 using Microsoft.AspNetCore.Mvc;
 using demo_web.Models;
@@ -7,6 +7,7 @@ namespace demo_web.Controllers
 {
     public class SanPhamController : Controller
     {
+        //Lấy từ class SanPham bên model
         public static List<SanPham> products = new List<SanPham>();
         public IActionResult Index(bool? check = false)
         {

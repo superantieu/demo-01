@@ -1,4 +1,7 @@
-﻿@using demo_web.Models;
+﻿
+
+@using demo_web.Models;
+@*Link tới model*@
 @model IEnumerable<demo_web.Models.SanPham>;
 @{
     ViewData["Title"] = "Index";
@@ -35,8 +38,8 @@
                                     <td class="text-center">@item.SoLuong</td>
                                     <td class="text-center">@item.DonGia.ToString("N0")</td>
                                     <td class="text-end">@item.TamTinh.ToString("N0")</td>
-                                    <td class="text-center"><a href="@Url.Action("RemoveProduct", "SanPham", new { position = @i })"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
-                                </tr>
+                                    <td class="text-center"><a href="@Url.Action("RemoveProduct", @*Gọi hàm RemoveProduct bên SanPham với giá trị position = i để xóa hàng ở vị trí thứ i*@ "SanPham", new { position = @i })"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
+                                </tr>                                                                 @*  Cũng có nghĩa là trả về đường link /SanPham/RemoveProduct?position=i*@
                             }
                         }
                         else
@@ -86,8 +89,8 @@
                 <hr />
                 <div class="d-flex align-items-center justify-content-center my-5 gap-5">
                     <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2">Thêm vào giỏ hàng</button>
-                    <a type="button" id="thanhtoan" class="btn btn-outline-warning px-4 py-2" href="@Url.Action("Index","SanPham", new { check = true})" onclick="HienThiThongBao()">Thanh toán</a>
-
+                    <a type="button" id="thanhtoan" class="btn btn-outline-warning px-4 py-2" href="@Url.Action("Index",@*Gọi hàm Index bên SanPham với giá trị check = true để clear list*@"SanPham", new { check = true})" onclick="HienThiThongBao()">Thanh toán</a>
+                                                                                                                                    @*Trả về link /SanPham/Index?check=true*@
                 </div>
             </form>
         </div>
